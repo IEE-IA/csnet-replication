@@ -26,7 +26,7 @@ class CSNet():
 
         model.add(Permute((2,1)))
 
-        model.add(LSTM(250))
+        model.add(LSTM(250, stateful=True))
         model.add(Activation('tanh'))
 
         model.add(Dense(256))
